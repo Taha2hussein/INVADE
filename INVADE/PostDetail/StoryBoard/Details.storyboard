@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Detail View-->
+        <scene sceneID="PqH-UZ-LoC">
+            <objects>
+                <viewController storyboardIdentifier="PostDetailController" id="iRn-qD-mnh" customClass="PostDetailView" customModule="iOS_Viper_Architecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5rW-sA-hYU"/>
+                        <viewControllerLayoutGuide type="bottom" id="GjJ-H5-BBC"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="P5g-B6-fD4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-I1-sng">
+                                <rect key="frame" x="10" y="159" width="115" height="195"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3U-A1-Iyc">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="hMv-bf-zeH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPT-SQ-VSf">
+                                        <rect key="frame" x="0.0" y="65" width="115" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="fDu-yv-4CT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindorks Viper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-hS-we2">
+                                        <rect key="frame" x="0.0" y="130" width="115" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="6pG-Ey-Cv5"/>
+                                            <constraint firstAttribute="height" constant="65" id="WUL-Mb-j2f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gue-1z-gRm">
+                                <rect key="frame" x="22.999999999999996" y="94" width="61.666666666666657" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="BackAction:" destination="iRn-qD-mnh" eventType="touchUpInside" id="MQU-gY-81S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK3-zX-tuW">
+                                <rect key="frame" x="298.33333333333331" y="94" width="82.666666666666686" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshAction:" destination="iRn-qD-mnh" eventType="touchUpInside" id="EGA-tJ-EL1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC9-Cp-aIp">
+                                <rect key="frame" x="298.66666666666669" y="246.33333333333334" width="41.333333333333314" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IbZ-Et-2cb"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gue-1z-gRm" firstAttribute="leading" secondItem="IbZ-Et-2cb" secondAttribute="leading" constant="23" id="6XJ-jy-MdW"/>
+                            <constraint firstItem="Gue-1z-gRm" firstAttribute="top" secondItem="IbZ-Et-2cb" secondAttribute="top" constant="35" id="Jdo-7Y-pYA"/>
+                            <constraint firstItem="pHz-I1-sng" firstAttribute="top" secondItem="IbZ-Et-2cb" secondAttribute="top" constant="100" id="ZU1-Xv-pU6"/>
+                            <constraint firstItem="NK3-zX-tuW" firstAttribute="top" secondItem="IbZ-Et-2cb" secondAttribute="top" constant="35" id="cSG-g8-vlq"/>
+                            <constraint firstItem="IbZ-Et-2cb" firstAttribute="trailing" secondItem="NK3-zX-tuW" secondAttribute="trailing" constant="12" id="fE3-PL-0xz"/>
+                            <constraint firstItem="wC9-Cp-aIp" firstAttribute="centerY" secondItem="pHz-I1-sng" secondAttribute="centerY" id="iyz-Wh-YSe"/>
+                            <constraint firstItem="pHz-I1-sng" firstAttribute="leading" secondItem="IbZ-Et-2cb" secondAttribute="leading" constant="10" id="rC5-Be-hf1"/>
+                            <constraint firstItem="IbZ-Et-2cb" firstAttribute="trailing" secondItem="wC9-Cp-aIp" secondAttribute="trailing" constant="53" id="tLs-b6-zDy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="psg-tk-pcF"/>
+                    <connections>
+                        <outlet property="codeLabel" destination="wC9-Cp-aIp" id="Hvt-eI-1fi"/>
+                        <outlet property="countryLabel" destination="d4N-hS-we2" id="Hlv-B1-VS5"/>
+                        <outlet property="nameLabel" destination="V3U-A1-Iyc" id="oHC-2j-XSi"/>
+                        <outlet property="stateLabel" destination="jPT-SQ-VSf" id="imj-mQ-6AL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-c2-GIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-663.41829085457277"/>
+        </scene>
+    </scenes>
+</document>
